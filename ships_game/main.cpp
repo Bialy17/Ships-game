@@ -89,7 +89,6 @@ int main()
 
             clearScreen();
             cout << (hit ? "Hit!" : "Miss!") << endl;
-
             if (hit) {
                 if ((currentPlayer == 1 && player2.getBoard().isGameOver()) || (currentPlayer == 2 && player1.getBoard().isGameOver())) {
                     cout << (currentPlayer == 1 ? player1.getPlayerName() : player2.getPlayerName()) << " wins!" << endl;
@@ -101,7 +100,12 @@ int main()
                     gameOver = true;
                 }
             } else {
+                cout << "Press any key to continue..." << endl;
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                cin.get();
                 currentPlayer = (currentPlayer == 1) ? 2 : 1;
+
             }
 
             if (!gameOver) {
