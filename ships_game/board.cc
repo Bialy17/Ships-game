@@ -48,6 +48,11 @@ void Board::showHiddenBoard() const {
     }
 }
 
+void Board::clearScreen() const
+{
+    cout << "\033[2J\033[1;1H";
+}
+
 bool Board::shoot(int row, int col)
 {
     if (hiddenBoard[row][col] != '-')
