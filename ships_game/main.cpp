@@ -100,7 +100,7 @@ int main()
                     gameOver = true;
                 }
             } else {
-                cout << "Press any key to continue..." << endl;
+                cout << "Press any key to change player..." << endl;
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 cin.get();
