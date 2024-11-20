@@ -40,7 +40,26 @@ bool getPlayerShot(Player& player1, Player& player2, int currentPlayer, int& row
             this_thread::sleep_for(chrono::seconds(2));
             clearScreen();
             displayBoards(player1, player2, currentPlayer);
-        } else {
+        }
+        else if(currentPlayer == 1 && !player2.getHiddenBoard().isCellShot(row, col)) {
+            cout << "You've already shot there! Please try again." << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Invalid coordinates! Please try again." << endl;
+            this_thread::sleep_for(chrono::seconds(2));
+            clearScreen();
+            displayBoards(player1, player2, currentPlayer);
+        }
+        else if(currentPlayer == 2 && !player1.getHiddenBoard().isCellShot(row, col)) {
+            cout << "You've already shot there! Please try again." << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Invalid coordinates! Please try again." << endl;
+            this_thread::sleep_for(chrono::seconds(2));
+            clearScreen();
+            displayBoards(player1, player2, currentPlayer);
+        }
+        else {
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             return true;
         }
