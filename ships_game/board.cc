@@ -198,3 +198,14 @@ void Board::resetBoard()
         }
     }
 }
+
+bool Board::isCellShot(int row, int col)
+{
+    if(hiddenBoard[row][col] == 'X' || hiddenBoard[row][col] == 'O')
+    {
+        return false;
+    }
+    else{
+        return true;
+    }
+}
