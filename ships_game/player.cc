@@ -213,6 +213,7 @@ void Player::setShips()
 Board &Player::getBoard()
 {
     return board;
+    return hiddenBoard;
 }
 
 void Player::setPlayerName() {
