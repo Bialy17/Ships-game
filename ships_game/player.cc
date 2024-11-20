@@ -213,6 +213,10 @@ void Player::setShips()
 Board &Player::getBoard()
 {
     return board;
+}
+
+Board &Player::getHiddenBoard()
+{
     return hiddenBoard;
 }
 
