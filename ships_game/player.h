@@ -17,6 +17,14 @@ private:
 public:
     Player();
     ~Player();
+
+    void placeShipElements(int &row, int &col, int i, Ship& ship);
+    void createShips();
+    void placeFirstElement(int &row, int &col, int &firstRow, int &firstCol, int &direction, bool &validInput, int &length, Ship &ship);
+    void isShipInStraightLine(int &row, int &col, int &firstRow, int &firstCol, int &direction, bool &validInput);
+    void isShipPlacedHorizontally(int &row, int &col, int &i, int &firstRow, int &firstCol, int &direction, bool &validInput);
+    void isShipPlacedVertically(int &row, int &col, int &i, int &firstRow, int &firstCol, int &direction, bool &validInput);
+    void canShipBePlaced(int &row, int &col, int &i, int &firstRow, int &firstCol, int &direction, bool &validInput, int &length, Ship &ship);
     void setShips();
     Board& getBoard();
     void setPlayerName(); 
