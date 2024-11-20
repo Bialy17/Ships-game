@@ -11,6 +11,7 @@ using namespace std;
 class Player {
 private:
     Board board;
+    Board hiddenBoard;
     string playerName;
     int playerWins = 0;
     vector<Ship> ships;
