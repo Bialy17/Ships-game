@@ -16,6 +16,7 @@ public:
 
     void showBoard() const;
     void showHiddenBoard() const;
+    void clearScreen() const;
     bool shoot(int row, int col);
     bool isGameOver() const;
     static int getBoardSize();
