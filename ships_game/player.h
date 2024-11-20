@@ -28,6 +28,7 @@ public:
     void canShipBePlaced(int &row, int &col, int &i, int &firstRow, int &firstCol, int &direction, bool &validInput, int &length, Ship &ship);
     void setShips();
     Board& getBoard();
+    Board& getHiddenBoard();
     void setPlayerName(); 
     string getPlayerName();
     int getPlayerWins();
