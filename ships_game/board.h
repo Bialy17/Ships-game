@@ -27,5 +27,6 @@ public:
     bool canPlaceHorizontally(int firstRow, int firstCol, int length);
     bool canPlaceVertically(int firstRow, int firstCol, int length);
     void resetBoard();
+    bool isCellShot(int row, int col);
 };
 #endif
